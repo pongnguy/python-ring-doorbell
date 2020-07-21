@@ -3,8 +3,8 @@
 """Python Ring Chime wrapper."""
 import logging
 
-from ring_doorbell.generic import RingGeneric
-from ring_doorbell.const import (
+from ring_doorbell.ring_doorbell.generic import RingGeneric
+from ring_doorbell.ring_doorbell.const import (
     CHIMES_ENDPOINT,
     CHIME_VOL_MIN,
     CHIME_VOL_MAX,

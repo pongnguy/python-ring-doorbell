@@ -3,7 +3,7 @@
 """Python Ring Auth Class."""
 from requests_oauthlib import OAuth2Session
 from oauthlib.oauth2 import LegacyApplicationClient, TokenExpiredError
-from ring_doorbell.const import OAuth, API_VERSION, TIMEOUT
+from ring_doorbell.ring_doorbell.const import OAuth, API_VERSION, TIMEOUT
 
 
 class Auth:
@@ -18,7 +18,8 @@ class Auth:
 
         self.token_updater = token_updater
         self._oauth = OAuth2Session(
-            client=LegacyApplicationClient(client_id=OAuth.CLIENT_ID), token=token
+            client=LegacyApplicationClient(client_id=OAuth.CLIENT_ID),
+            token={'access_token': token, 'token_type': 'bearer'}
         )
 
     def fetch_token(self, username, password, otp_code=None):

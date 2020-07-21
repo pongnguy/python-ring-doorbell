@@ -8,9 +8,9 @@ import time
 import pytz
 
 
-from ring_doorbell.generic import RingGeneric
+from ring_doorbell.ring_doorbell.generic import RingGeneric
 
-from ring_doorbell.const import (
+from ring_doorbell.ring_doorbell.const import (
     DOORBELLS_ENDPOINT,
     DOORBELL_VOL_MIN,
     DOORBELL_VOL_MAX,

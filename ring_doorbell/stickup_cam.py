@@ -3,8 +3,8 @@
 """Python Ring Doorbell wrapper."""
 import logging
 
-from ring_doorbell import RingDoorBell
-from ring_doorbell.const import (
+from ring_doorbell.ring_doorbell import RingDoorBell
+from ring_doorbell.ring_doorbell.const import (
     LIGHTS_ENDPOINT,
     MSG_ALLOWED_VALUES,
     MSG_VOL_OUTBOUND,
